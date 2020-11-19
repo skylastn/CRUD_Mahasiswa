@@ -15,19 +15,19 @@ class MahasiswaViewModels {
     var dan = '&';
 
     if(id==null||id.isEmpty){
-      data = await http.get(apiClient.getBaseUrl()+"Mahasiswa", headers: {
+      data = await http.get(apiClient.getBaseUrl()+"Mahasiswa/Karyawan", headers: {
         'Accept': 'application/json',
       });
     }else{
       var materiget = 'id='+id;
-      data = await http.get(apiClient.getBaseUrl()+"Mahasiswa?"+materiget, headers: {
+      data = await http.get(apiClient.getBaseUrl()+"Mahasiswa/karyawan"+materiget, headers: {
         'Accept': 'application/json',
       });
     }
 
 
 //    final data2 = artikelFromJson(data.body);
-    print('Cek Data Mahasiswa: '+data.body);
+    print('Cek Data Karyawan: '+data.body);
     return mahasiswaFromJson(data.body);
 
   }

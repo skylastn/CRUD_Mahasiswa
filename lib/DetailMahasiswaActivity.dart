@@ -11,7 +11,7 @@ import 'package:tesmahasiswa/Model/Mahasiswa.dart';
 import 'package:tesmahasiswa/Network/ApiClient.dart';
 
 class DetailMahasiswaActivity extends StatefulWidget {
-  List<Listmh> produk;
+  List<Listkaryawan> produk;
   int index;
 
   DetailMahasiswaActivity(
@@ -124,251 +124,251 @@ class _DetailMahasiswaActivity extends State<DetailMahasiswaActivity> {
             new Text("Email", style: new TextStyle(fontSize: 15.0),
               textAlign: TextAlign.left,
             ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0,10,0,10),
-              width: double.infinity,
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: BorderSide(color: Colors.black)),
-                color: Colors.white,
-                textColor: Colors.black,
-                padding: EdgeInsets.all(12.0),
-                onPressed: () {
-
-
-                },
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                      child: widget.produk[widget.index].email==null
-                          ?Text(
-                          "",
-                          style: new TextStyle(fontSize: 18.0,
-                            fontWeight: FontWeight.bold,)
-                      )
-                          :Text(
-                          widget.produk[widget.index].email,
-                          style: new TextStyle(fontSize: 18.0,
-                            fontWeight: FontWeight.bold,)
-                      )
-                  ),
-                ),
-              ),
-            ),
-
-            new Text("Tempat Lahir", style: new TextStyle(fontSize: 15.0),
-              textAlign: TextAlign.left,
-            ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0,10,0,10),
-              width: double.infinity,
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: BorderSide(color: Colors.black)),
-                color: Colors.white,
-                textColor: Colors.black,
-                padding: EdgeInsets.all(12.0),
-                onPressed: () {
-
-
-                },
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                      child: widget.produk[widget.index].tempatLahir==null
-                          ?Text(
-                          "",
-                          style: new TextStyle(fontSize: 18.0,
-                            fontWeight: FontWeight.bold,)
-                      )
-                          :Text(
-                          widget.produk[widget.index].tempatLahir,
-                          style: new TextStyle(fontSize: 18.0,
-                            fontWeight: FontWeight.bold,)
-                      )
-                  ),
-                ),
-              ),
-            ),
-
-            new Text("Alamat", style: new TextStyle(fontSize: 15.0),
-              textAlign: TextAlign.left,
-            ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0,10,0,10),
-              width: double.infinity,
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: BorderSide(color: Colors.black)),
-                color: Colors.white,
-                textColor: Colors.black,
-                padding: EdgeInsets.all(12.0),
-                onPressed: () {
-
-
-                },
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                      child: widget.produk[widget.index].alamat==null
-                          ?Text(
-                          "",
-                          style: new TextStyle(fontSize: 18.0,
-                            fontWeight: FontWeight.bold,)
-                      )
-                          :Text(
-                          widget.produk[widget.index].alamat,
-                          style: new TextStyle(fontSize: 18.0,
-                            fontWeight: FontWeight.bold,)
-                      )
-                  ),
-                ),
-              ),
-            ),
-
-            new Text("Asal Sekolah", style: new TextStyle(fontSize: 15.0),
-              textAlign: TextAlign.left,
-            ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0,10,0,10),
-              width: double.infinity,
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: BorderSide(color: Colors.black)),
-                color: Colors.white,
-                textColor: Colors.black,
-                padding: EdgeInsets.all(12.0),
-                onPressed: () {
-
-
-                },
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                      child: widget.produk[widget.index].asalSekolah==null
-                          ?Text(
-                          "",
-                          style: new TextStyle(fontSize: 18.0,
-                            fontWeight: FontWeight.bold,)
-                      )
-                          :Text(
-                          widget.produk[widget.index].asalSekolah,
-                          style: new TextStyle(fontSize: 18.0,
-                            fontWeight: FontWeight.bold,)
-                      )
-                  ),
-                ),
-              ),
-            ),
-
-            new Text("Kota", style: new TextStyle(fontSize: 15.0),
-              textAlign: TextAlign.left,
-            ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0,10,0,10),
-              width: double.infinity,
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: BorderSide(color: Colors.black)),
-                color: Colors.white,
-                textColor: Colors.black,
-                padding: EdgeInsets.all(12.0),
-                onPressed: () {
-
-
-                },
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                      child: widget.produk[widget.index].kota==null
-                          ?Text(
-                          "",
-                          style: new TextStyle(fontSize: 18.0,
-                            fontWeight: FontWeight.bold,)
-                      )
-                          :Text(
-                          widget.produk[widget.index].kota,
-                          style: new TextStyle(fontSize: 18.0,
-                            fontWeight: FontWeight.bold,)
-                      )
-                  ),
-                ),
-              ),
-            ),
-
-            new Text("Provinsi", style: new TextStyle(fontSize: 15.0),
-              textAlign: TextAlign.left,
-            ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0,10,0,10),
-              width: double.infinity,
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: BorderSide(color: Colors.black)),
-                color: Colors.white,
-                textColor: Colors.black,
-                padding: EdgeInsets.all(12.0),
-                onPressed: () {
-
-
-                },
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                      child: widget.produk[widget.index].provinsi==null
-                          ?Text(
-                          "",
-                          style: new TextStyle(fontSize: 18.0,
-                            fontWeight: FontWeight.bold,)
-                      )
-                          :Text(
-                          widget.produk[widget.index].provinsi,
-                          style: new TextStyle(fontSize: 18.0,
-                            fontWeight: FontWeight.bold,)
-                      )
-                  ),
-                ),
-              ),
-            ),
-
-            new Text("Tanggal Lahir", style: new TextStyle(fontSize: 15.0),
-              textAlign: TextAlign.left,
-            ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0,10,0,10),
-              width: double.infinity,
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: BorderSide(color: Colors.black)),
-                color: Colors.white,
-                textColor: Colors.black,
-                padding: EdgeInsets.all(12.0),
-                onPressed: () {
-//                                    Navigator.push(
-//                                      context,
-//                                      MaterialPageRoute(builder: (context) => RegisterMember()),
-//                                    );
-
-                },
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                    child: Text(
-                        tgllahir,
-                        style: new TextStyle(fontSize: 18.0,
-                          fontWeight: FontWeight.bold,)
-                    ),
-                  ),
-                ),
-              ),
-            ),
+//            Container(
+//              margin: const EdgeInsets.fromLTRB(0,10,0,10),
+//              width: double.infinity,
+//              child: FlatButton(
+//                shape: RoundedRectangleBorder(
+//                    borderRadius: BorderRadius.circular(18.0),
+//                    side: BorderSide(color: Colors.black)),
+//                color: Colors.white,
+//                textColor: Colors.black,
+//                padding: EdgeInsets.all(12.0),
+//                onPressed: () {
+//
+//
+//                },
+//                child: Align(
+//                  alignment: Alignment.centerLeft,
+//                  child: Container(
+//                      child: widget.produk[widget.index].email==null
+//                          ?Text(
+//                          "",
+//                          style: new TextStyle(fontSize: 18.0,
+//                            fontWeight: FontWeight.bold,)
+//                      )
+//                          :Text(
+//                          widget.produk[widget.index].email,
+//                          style: new TextStyle(fontSize: 18.0,
+//                            fontWeight: FontWeight.bold,)
+//                      )
+//                  ),
+//                ),
+//              ),
+//            ),
+//
+//            new Text("Tempat Lahir", style: new TextStyle(fontSize: 15.0),
+//              textAlign: TextAlign.left,
+//            ),
+//            Container(
+//              margin: const EdgeInsets.fromLTRB(0,10,0,10),
+//              width: double.infinity,
+//              child: FlatButton(
+//                shape: RoundedRectangleBorder(
+//                    borderRadius: BorderRadius.circular(18.0),
+//                    side: BorderSide(color: Colors.black)),
+//                color: Colors.white,
+//                textColor: Colors.black,
+//                padding: EdgeInsets.all(12.0),
+//                onPressed: () {
+//
+//
+//                },
+//                child: Align(
+//                  alignment: Alignment.centerLeft,
+//                  child: Container(
+//                      child: widget.produk[widget.index].tempatLahir==null
+//                          ?Text(
+//                          "",
+//                          style: new TextStyle(fontSize: 18.0,
+//                            fontWeight: FontWeight.bold,)
+//                      )
+//                          :Text(
+//                          widget.produk[widget.index].tempatLahir,
+//                          style: new TextStyle(fontSize: 18.0,
+//                            fontWeight: FontWeight.bold,)
+//                      )
+//                  ),
+//                ),
+//              ),
+//            ),
+//
+//            new Text("Alamat", style: new TextStyle(fontSize: 15.0),
+//              textAlign: TextAlign.left,
+//            ),
+//            Container(
+//              margin: const EdgeInsets.fromLTRB(0,10,0,10),
+//              width: double.infinity,
+//              child: FlatButton(
+//                shape: RoundedRectangleBorder(
+//                    borderRadius: BorderRadius.circular(18.0),
+//                    side: BorderSide(color: Colors.black)),
+//                color: Colors.white,
+//                textColor: Colors.black,
+//                padding: EdgeInsets.all(12.0),
+//                onPressed: () {
+//
+//
+//                },
+//                child: Align(
+//                  alignment: Alignment.centerLeft,
+//                  child: Container(
+//                      child: widget.produk[widget.index].alamat==null
+//                          ?Text(
+//                          "",
+//                          style: new TextStyle(fontSize: 18.0,
+//                            fontWeight: FontWeight.bold,)
+//                      )
+//                          :Text(
+//                          widget.produk[widget.index].alamat,
+//                          style: new TextStyle(fontSize: 18.0,
+//                            fontWeight: FontWeight.bold,)
+//                      )
+//                  ),
+//                ),
+//              ),
+//            ),
+//
+//            new Text("Asal Sekolah", style: new TextStyle(fontSize: 15.0),
+//              textAlign: TextAlign.left,
+//            ),
+//            Container(
+//              margin: const EdgeInsets.fromLTRB(0,10,0,10),
+//              width: double.infinity,
+//              child: FlatButton(
+//                shape: RoundedRectangleBorder(
+//                    borderRadius: BorderRadius.circular(18.0),
+//                    side: BorderSide(color: Colors.black)),
+//                color: Colors.white,
+//                textColor: Colors.black,
+//                padding: EdgeInsets.all(12.0),
+//                onPressed: () {
+//
+//
+//                },
+//                child: Align(
+//                  alignment: Alignment.centerLeft,
+//                  child: Container(
+//                      child: widget.produk[widget.index].asalSekolah==null
+//                          ?Text(
+//                          "",
+//                          style: new TextStyle(fontSize: 18.0,
+//                            fontWeight: FontWeight.bold,)
+//                      )
+//                          :Text(
+//                          widget.produk[widget.index].asalSekolah,
+//                          style: new TextStyle(fontSize: 18.0,
+//                            fontWeight: FontWeight.bold,)
+//                      )
+//                  ),
+//                ),
+//              ),
+//            ),
+//
+//            new Text("Kota", style: new TextStyle(fontSize: 15.0),
+//              textAlign: TextAlign.left,
+//            ),
+//            Container(
+//              margin: const EdgeInsets.fromLTRB(0,10,0,10),
+//              width: double.infinity,
+//              child: FlatButton(
+//                shape: RoundedRectangleBorder(
+//                    borderRadius: BorderRadius.circular(18.0),
+//                    side: BorderSide(color: Colors.black)),
+//                color: Colors.white,
+//                textColor: Colors.black,
+//                padding: EdgeInsets.all(12.0),
+//                onPressed: () {
+//
+//
+//                },
+//                child: Align(
+//                  alignment: Alignment.centerLeft,
+//                  child: Container(
+//                      child: widget.produk[widget.index].kota==null
+//                          ?Text(
+//                          "",
+//                          style: new TextStyle(fontSize: 18.0,
+//                            fontWeight: FontWeight.bold,)
+//                      )
+//                          :Text(
+//                          widget.produk[widget.index].kota,
+//                          style: new TextStyle(fontSize: 18.0,
+//                            fontWeight: FontWeight.bold,)
+//                      )
+//                  ),
+//                ),
+//              ),
+//            ),
+//
+//            new Text("Provinsi", style: new TextStyle(fontSize: 15.0),
+//              textAlign: TextAlign.left,
+//            ),
+//            Container(
+//              margin: const EdgeInsets.fromLTRB(0,10,0,10),
+//              width: double.infinity,
+//              child: FlatButton(
+//                shape: RoundedRectangleBorder(
+//                    borderRadius: BorderRadius.circular(18.0),
+//                    side: BorderSide(color: Colors.black)),
+//                color: Colors.white,
+//                textColor: Colors.black,
+//                padding: EdgeInsets.all(12.0),
+//                onPressed: () {
+//
+//
+//                },
+//                child: Align(
+//                  alignment: Alignment.centerLeft,
+//                  child: Container(
+//                      child: widget.produk[widget.index].provinsi==null
+//                          ?Text(
+//                          "",
+//                          style: new TextStyle(fontSize: 18.0,
+//                            fontWeight: FontWeight.bold,)
+//                      )
+//                          :Text(
+//                          widget.produk[widget.index].provinsi,
+//                          style: new TextStyle(fontSize: 18.0,
+//                            fontWeight: FontWeight.bold,)
+//                      )
+//                  ),
+//                ),
+//              ),
+//            ),
+//
+//            new Text("Tanggal Lahir", style: new TextStyle(fontSize: 15.0),
+//              textAlign: TextAlign.left,
+//            ),
+//            Container(
+//              margin: const EdgeInsets.fromLTRB(0,10,0,10),
+//              width: double.infinity,
+//              child: FlatButton(
+//                shape: RoundedRectangleBorder(
+//                    borderRadius: BorderRadius.circular(18.0),
+//                    side: BorderSide(color: Colors.black)),
+//                color: Colors.white,
+//                textColor: Colors.black,
+//                padding: EdgeInsets.all(12.0),
+//                onPressed: () {
+////                                    Navigator.push(
+////                                      context,
+////                                      MaterialPageRoute(builder: (context) => RegisterMember()),
+////                                    );
+//
+//                },
+//                child: Align(
+//                  alignment: Alignment.centerLeft,
+//                  child: Container(
+//                    child: Text(
+//                        tgllahir,
+//                        style: new TextStyle(fontSize: 18.0,
+//                          fontWeight: FontWeight.bold,)
+//                    ),
+//                  ),
+//                ),
+//              ),
+//            ),
 
           ],
         ),

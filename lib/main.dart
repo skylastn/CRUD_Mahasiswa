@@ -10,7 +10,7 @@ import 'package:tesmahasiswa/Network/ApiClient.dart';
 import 'package:tesmahasiswa/ResponsiveWidget.dart';
 import 'package:tesmahasiswa/ViewModel/KotaViewModels.dart';
 import 'package:tesmahasiswa/ViewModel/ProvinsiViewModels.dart';
-import 'package:tesmahasiswa/customappbar.dart';
+import 'package:tesmahasiswa/CustomAppBar.dart';
 import 'package:tesmahasiswa/textformfield.dart';
 
 void main() {
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               NiceButton(
                                 radius: 40,
                                 padding: const EdgeInsets.all(15),
-                                text: "Daftar Mahasiswa",
+                                text: "Daftar Karyawan",
 //                                icon: Icons.assignment_ind,
                                 gradientColors: [secondColor, firstColor],
                                 onPressed: () {

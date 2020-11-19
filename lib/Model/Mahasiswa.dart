@@ -6,64 +6,52 @@ String mahasiswaToJson(Mahasiswa data) => json.encode(data.toJson());
 
 class Mahasiswa {
   Mahasiswa({
-    this.listmhs,
+    this.listkaryawan,
   });
 
-  List<Listmh> listmhs;
+  List<Listkaryawan> listkaryawan;
 
   factory Mahasiswa.fromJson(Map<String, dynamic> json) => Mahasiswa(
-    listmhs: List<Listmh>.from(json["listmhs"].map((x) => Listmh.fromJson(x))),
+    listkaryawan: List<Listkaryawan>.from(json["listkaryawan"].map((x) => Listkaryawan.fromJson(x))),
   );
 
   Map<String, dynamic> toJson() => {
-    "listmhs": List<dynamic>.from(listmhs.map((x) => x.toJson())),
+    "listkaryawan": List<dynamic>.from(listkaryawan.map((x) => x.toJson())),
   };
 }
 
-class Listmh {
-  Listmh({
+class Listkaryawan {
+  Listkaryawan({
     this.id,
+    this.nik,
     this.nama,
-    this.email,
-    this.tempatLahir,
-    this.alamat,
-    this.asalSekolah,
-    this.kota,
-    this.provinsi,
     this.tglLahir,
+    this.kota,
+    this.gaji,
   });
 
   String id;
+  String nik;
   String nama;
-  String email;
-  String tempatLahir;
-  String alamat;
-  String asalSekolah;
+  String tglLahir;
   String kota;
-  String provinsi;
-  DateTime tglLahir;
+  String gaji;
 
-  factory Listmh.fromJson(Map<String, dynamic> json) => Listmh(
+  factory Listkaryawan.fromJson(Map<String, dynamic> json) => Listkaryawan(
     id: json["id"],
+    nik: json["nik"],
     nama: json["nama"],
-    email: json["email"],
-    tempatLahir: json["tempat_lahir"],
-    alamat: json["alamat"],
-    asalSekolah: json["asal_sekolah"],
+    tglLahir: json["tgl_lahir"],
     kota: json["kota"],
-    provinsi: json["provinsi"],
-    tglLahir: DateTime.parse(json["tgl_lahir"]),
+    gaji: json["gaji"],
   );
 
   Map<String, dynamic> toJson() => {
     "id": id,
+    "nik": nik,
     "nama": nama,
-    "email": email,
-    "tempat_lahir": tempatLahir,
-    "alamat": alamat,
-    "asal_sekolah": asalSekolah,
+    "tgl_lahir": tglLahir,
     "kota": kota,
-    "provinsi": provinsi,
-    "tgl_lahir": "${tglLahir.year.toString().padLeft(4, '0')}-${tglLahir.month.toString().padLeft(2, '0')}-${tglLahir.day.toString().padLeft(2, '0')}",
+    "gaji": gaji,
   };
 }

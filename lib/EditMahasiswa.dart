@@ -15,9 +15,24 @@ import 'package:tesmahasiswa/main.dart';
 import 'package:tesmahasiswa/textformfield.dart';
 import 'package:http/http.dart' as http;
 
-class DaftarMahasiswaActivity extends StatefulWidget {
+class EditMahasiswaActivity extends StatefulWidget {
+
+  String id, nik, nama, tgl, kota, gaji;
+
+  EditMahasiswaActivity(
+      {Key key,
+        @required this.id,
+        @required this.nik,
+        @required this.nama,
+        @required this.tgl,
+        @required this.kota,
+        @required this.gaji,
+
+
+      })
+      : super(key: key);
   @override
-  _DaftarMahasiswaActivity createState() => _DaftarMahasiswaActivity();
+  _EditMahasiswaActivity createState() => _EditMahasiswaActivity();
 }
 
 //List<String> data = ['Page 0', 'Page 1', 'Page 2'];
@@ -31,7 +46,7 @@ TextEditingController searchController = new TextEditingController();
 
 double height, width;
 
-class _DaftarMahasiswaActivity extends State<DaftarMahasiswaActivity>  {
+class _EditMahasiswaActivity extends State<EditMahasiswaActivity>  {
   ApiClient apiClient = new ApiClient();
   List<Listprov> listprov = new List();
   List<Listkota> listKota = new List();
@@ -62,6 +77,13 @@ class _DaftarMahasiswaActivity extends State<DaftarMahasiswaActivity>  {
   void initState() {
     // TODO: implement initState
     super.initState();
+    print(widget.nik);
+    nikcontroller.text = widget.nik;
+    namacontroller.text = widget.nama;
+    tgl = widget.tgl;
+    kotacontroller.text = widget.kota;
+    gajicontroller.text = widget.gaji;
+
 //    getProv();
   }
 
@@ -441,7 +463,7 @@ class _DaftarMahasiswaActivity extends State<DaftarMahasiswaActivity>  {
 //          print("Routing to your account");
 //          DaftarMember("", namacontroller.text, emailcontroller.text, tempatcontroller.text,
 //              alamatcontroller.text, asalcontroller.text, cityfix, provfix, tgl);
-          DaftarMember2("", nikcontroller.text, namacontroller.text, tgl, kotacontroller.text, gajicontroller.text );
+          editMember(widget.id, nikcontroller.text, namacontroller.text, tgl, kotacontroller.text, gajicontroller.text );
         },
         textColor: Colors.white,
         padding: EdgeInsets.all(0.0),
@@ -456,7 +478,7 @@ class _DaftarMahasiswaActivity extends State<DaftarMahasiswaActivity>  {
             ),
           ),
           padding: const EdgeInsets.all(12.0),
-          child: Text('DAFTAR', style: TextStyle(fontSize: 18),),
+          child: Text('EDIT KARYAWAN', style: TextStyle(fontSize: 18),),
         ),
       )
       ,
@@ -594,10 +616,10 @@ class _DaftarMahasiswaActivity extends State<DaftarMahasiswaActivity>  {
     );
   }
 
-  DaftarMember2(String id, nik, nama, tgl, kota, gaji) async {
+  editMember(String id, nik, nama, tgl, kota, gaji) async {
     print("id:"+id+"||nik:"+nik+"||nama:"+nama+"||tgl:"+tgl+"||kota:"+kota+"||gaji:"+gaji);
-    print(apiClient.getBaseUrl()+"Mahasiswa/add_karyawan");
-    http.post(apiClient.getBaseUrl()+"Mahasiswa/add_karyawan", headers: {
+    print(apiClient.getBaseUrl()+"Mahasiswa/edit_karyawan");
+    http.put(apiClient.getBaseUrl()+"Mahasiswa/edit_karyawan", headers: {
       'Accept': 'application/json',
 //      'authorization': apiConfig.getBasicAuth()
     }, body: {
@@ -611,14 +633,14 @@ class _DaftarMahasiswaActivity extends State<DaftarMahasiswaActivity>  {
       //check response status, if response status OK
 //    print("Response Status : $res");
       var data = json.decode(response.body);
-    print(data);
+      print(data);
       if (response.statusCode == 200) {
 
         if (data["status"] == true) {
 //          print(data['mobiletoken']);
 
           Fluttertoast.showToast(
-              msg: "Berhasil Menambahkan Karyawan",
+              msg: "Berhasil Mengedit Data Karyawan",
               toastLength: Toast.LENGTH_SHORT,
               gravity: ToastGravity.CENTER,
 //              timeInSecForIos: 1,
