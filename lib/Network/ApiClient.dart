@@ -4,6 +4,6 @@ class ApiClient{
 
 
   String getBaseUrl(){
-    return "http://tokosahid.online/testingapk/index.php/api/";
+    return "http://tokosahid.my.id/testingapk/index.php/api/";
   }
 }
